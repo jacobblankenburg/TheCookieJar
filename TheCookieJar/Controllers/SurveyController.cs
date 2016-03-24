@@ -16,7 +16,7 @@ namespace TheCookieJar.Controllers
         // GET: Surveys
         public ActionResult Index()
         {
-            return View(db.Surveys.FirstOrDefault());
+            return View(db.Surveys.ToList());
         }
 
         public ActionResult Details(int? id)

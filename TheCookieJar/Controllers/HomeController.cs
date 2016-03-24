@@ -26,5 +26,15 @@ namespace TheCookieJar.Controllers
 
             return View();
         }
+        public ActionResult Prices()
+        {
+            ViewBag.Message = "Prices for our boxes";
+
+            return View();
+        }
+        public ActionResult Admin()
+        {
+            return View();
+        }
     }
 }
