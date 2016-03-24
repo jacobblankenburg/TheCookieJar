@@ -54,9 +54,9 @@ namespace TheCookieJar
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "821604657985386",
+               appSecret: "c6ce32076441de6bca0d7a74e4ba721b");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
