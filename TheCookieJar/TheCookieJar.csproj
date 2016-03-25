@@ -204,16 +204,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603241945548_initialmigration.cs" />
-    <Compile Include="Migrations\201603241945548_initialmigration.Designer.cs">
-      <DependentUpon>201603241945548_initialmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603251655061_MigrationAdmin.cs" />
-    <Compile Include="Migrations\201603251655061_MigrationAdmin.Designer.cs">
-      <DependentUpon>201603251655061_MigrationAdmin.cs</DependentUpon>
+    <Compile Include="Migrations\201603251804572_Admin.cs" />
+    <Compile Include="Migrations\201603251804572_Admin.Designer.cs">
+      <DependentUpon>201603251804572_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Beverage.cs" />
     <Compile Include="Models\Cookie.cs" />
     <Compile Include="Models\CookieSurvey.cs" />
@@ -286,7 +283,6 @@
     <Content Include="Views\Survey\Create.cshtml" />
     <Content Include="Views\Survey\Index.cshtml" />
     <Content Include="Views\Home\Prices.cshtml" />
-    <Content Include="Views\Admin\Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -302,11 +298,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603241945548_initialmigration.resx">
-      <DependentUpon>201603241945548_initialmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603251655061_MigrationAdmin.resx">
-      <DependentUpon>201603251655061_MigrationAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201603251804572_Admin.resx">
+      <DependentUpon>201603251804572_Admin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

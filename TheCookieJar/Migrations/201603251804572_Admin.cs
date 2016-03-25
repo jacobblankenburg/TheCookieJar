@@ -3,7 +3,7 @@ namespace TheCookieJar.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initialmigration : DbMigration
+    public partial class Admin : DbMigration
     {
         public override void Up()
         {
