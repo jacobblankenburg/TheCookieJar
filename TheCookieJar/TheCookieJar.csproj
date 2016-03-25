@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -206,6 +207,10 @@
     <Compile Include="Migrations\201603241945548_initialmigration.cs" />
     <Compile Include="Migrations\201603241945548_initialmigration.Designer.cs">
       <DependentUpon>201603241945548_initialmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603251655061_MigrationAdmin.cs" />
+    <Compile Include="Migrations\201603251655061_MigrationAdmin.Designer.cs">
+      <DependentUpon>201603251655061_MigrationAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -281,10 +286,12 @@
     <Content Include="Views\Survey\Create.cshtml" />
     <Content Include="Views\Survey\Index.cshtml" />
     <Content Include="Views\Home\Prices.cshtml" />
-    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Admin\Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Navigation\" />
+    <Folder Include="Views\Role\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -297,6 +304,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201603241945548_initialmigration.resx">
       <DependentUpon>201603241945548_initialmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603251655061_MigrationAdmin.resx">
+      <DependentUpon>201603251655061_MigrationAdmin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
