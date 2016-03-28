@@ -18,5 +18,11 @@ namespace TheCookieJar.Models
         public double jarPrice { get; set; }
         public virtual List<JarContent> JarContents { get; set; }
 
+<<<<<<< HEAD
+=======
+            public int Id { get; set; }
+               
+
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
     }
 }

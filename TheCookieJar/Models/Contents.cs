@@ -13,7 +13,11 @@ namespace TheCookieJar.Models
 
         }
         public Contents(string name) : base(name)
+<<<<<<< HEAD
         {
+=======
+            {
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
 
         }
 

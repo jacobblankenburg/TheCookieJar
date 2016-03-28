@@ -13,23 +13,15 @@ namespace TheCookieJar.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "The Cookie Jar.";
-
-            return View();
-        }
-
         public ActionResult Contact()
         {
             ViewBag.Message = "Contact The Cookie Jar.";
 
             return View();
         }
-        public ActionResult Prices()
+        public ActionResult BoxChoices()
         {
-            ViewBag.Message = "Prices for our boxes";
+            ViewBag.Message = "View our boxes.";
 
             return View();
         }

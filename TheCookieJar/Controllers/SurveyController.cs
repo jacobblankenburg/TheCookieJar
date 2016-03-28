@@ -104,12 +104,20 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
+<<<<<<< HEAD
                             CoffeeBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = CoffeeBox;
                         }
                         else
                         {
+<<<<<<< HEAD
                             CoffeeBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = CoffeeBox;
                         }
                     }
@@ -117,12 +125,20 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
+<<<<<<< HEAD
                             KidBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = KidBox;
                         }
                         else
                         {
+<<<<<<< HEAD
                             KidBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = KidBox;
                         }
                     }
@@ -147,12 +163,20 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
+<<<<<<< HEAD
                             CoffeeBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = CoffeeBox;
                         }
                         else
                         {
+<<<<<<< HEAD
                             CoffeeBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = CoffeeBox;
                         }
                     }
@@ -160,12 +184,20 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
+<<<<<<< HEAD
                             KidBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = KidBox;
                         }
                         else
                         {
+<<<<<<< HEAD
                             KidBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = KidBox;
                         }
                     }
@@ -190,12 +222,20 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
+<<<<<<< HEAD
                             CoffeeBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = CoffeeBox;
                         }
                         else
                         {
+<<<<<<< HEAD
                             CoffeeBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = CoffeeBox;
                         }
                     }
@@ -203,11 +243,16 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
+<<<<<<< HEAD
                             KidBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
                             survey.jar = KidBox;
                         }
                         else
                         {
+<<<<<<< HEAD
                             KidBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
                             survey.jar = KidBox;
                         }
@@ -227,6 +272,12 @@ namespace TheCookieJar.Controllers
                         KidBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
                         survey.jar = KidBox;
                     }
+=======
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
+                            survey.jar = KidBox;
+                        }
+                    }
+>>>>>>> 79e1b9073d2aa6d55b4156a7deac94afc7732d5f
 
                 }
                 db.Surveys.Add(survey);

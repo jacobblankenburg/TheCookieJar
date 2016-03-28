@@ -8,15 +8,12 @@ using System.Linq;
 
 namespace TheCookieJar.Migrations
 {
-    
-
     internal sealed class Configuration : DbMigrationsConfiguration<TheCookieJar.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
-
         protected override void Seed(TheCookieJar.Models.ApplicationDbContext context)
         {
             {
@@ -30,7 +27,6 @@ namespace TheCookieJar.Migrations
                 roleManager.Create(new IdentityRole { Name = "admin" });
                 userManager.AddToRole(admin.Id, "admin");
             }
-
         }
     }
 }

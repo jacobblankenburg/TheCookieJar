@@ -12,7 +12,7 @@ namespace TheCookieJar.Models
         {
 
         }
-        public DbSet<Jar> Jar { get; set; }
+        public DbSet<Box> Jar { get; set; }
 
         public System.Data.Entity.DbSet<TheCookieJar.Models.Beverage> Beverages { get; set; }
         public System.Data.Entity.DbSet<TheCookieJar.Models.Cookie> Cookies { get; set; }

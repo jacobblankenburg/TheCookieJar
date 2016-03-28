@@ -18,17 +18,16 @@ namespace TheCookieJar.Models
         }
         public string Address { get; set; }
         public string City { get; set; }
-        public string Country { get; set; }
+        public string State { get; set; }
         public int ZipCode { get; set; }
     }
-
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Customer> Customer { get; set; }
         public DbSet<CookieSurvey> Survey { get; set; }
         public static ApplicationDbContext Create()
         {

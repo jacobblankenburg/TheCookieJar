@@ -158,7 +158,7 @@ namespace TheCookieJar.Controllers
                     City = model.City1,
                     Address = model.Address,
                     ZipCode = model.ZipCode,
-                    Country = model.Country
+                    State = model.State
 
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
@@ -207,7 +207,7 @@ namespace TheCookieJar.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        public async Task<ActionResult> ForgotPassword(RegisterViewModel.ForgotPasswordViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -251,7 +251,7 @@ namespace TheCookieJar.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ResetPassword(ResetPasswordViewModel model)
+        public async Task<ActionResult> ResetPassword(RegisterViewModel.ResetPasswordViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -325,8 +325,6 @@ namespace TheCookieJar.Controllers
             }
             return RedirectToAction("VerifyCode", new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
         }
-
-        //
         // GET: /Account/ExternalLoginCallback
         [AllowAnonymous]
         public async Task<ActionResult> ExternalLoginCallback(string returnUrl)
@@ -336,7 +334,6 @@ namespace TheCookieJar.Controllers
             {
                 return RedirectToAction("Login");
             }
-
             // Sign in the user with this external login provider if the user already has a login
             var result = await SignInManager.ExternalSignInAsync(loginInfo, isPersistent: false);
             switch (result)
@@ -355,8 +352,6 @@ namespace TheCookieJar.Controllers
                     return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
             }
         }
-
-        //
         // POST: /Account/ExternalLoginConfirmation
         [HttpPost]
         [AllowAnonymous]
@@ -393,7 +388,6 @@ namespace TheCookieJar.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View(model);
         }
-
         //
         // POST: /Account/LogOff
         [HttpPost]
@@ -403,7 +397,6 @@ namespace TheCookieJar.Controllers
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
         }
-
         //
         // GET: /Account/ExternalLoginFailure
         [AllowAnonymous]
