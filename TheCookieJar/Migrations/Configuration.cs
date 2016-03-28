@@ -8,6 +8,11 @@ using System.Linq;
 
 namespace TheCookieJar.Migrations
 {
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
     internal sealed class Configuration : DbMigrationsConfiguration<TheCookieJar.Models.ApplicationDbContext>
     {
         public Configuration()
@@ -27,7 +32,6 @@ namespace TheCookieJar.Migrations
                 roleManager.Create(new IdentityRole { Name = "admin" });
                 userManager.AddToRole(admin.Id, "admin");
             }
-
         }
     }
 }

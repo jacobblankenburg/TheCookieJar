@@ -64,7 +64,7 @@ namespace TheCookieJar.Models
 
     public class RegisterViewModel
     {
-     
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -83,7 +83,11 @@ namespace TheCookieJar.Models
         public string Address { get; set; }
         public string City1 { get; set; }
         public int ZipCode { get; set; }
+<<<<<<< HEAD
+        
+=======
         public string State { get; set; }
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
     }
 
     public class ResetPasswordViewModel
