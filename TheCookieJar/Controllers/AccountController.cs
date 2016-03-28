@@ -207,7 +207,7 @@ namespace TheCookieJar.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        public async Task<ActionResult> ForgotPassword(RegisterViewModel.ForgotPasswordViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -251,7 +251,7 @@ namespace TheCookieJar.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ResetPassword(ResetPasswordViewModel model)
+        public async Task<ActionResult> ResetPassword(RegisterViewModel.ResetPasswordViewModel model)
         {
             if (!ModelState.IsValid)
             {

@@ -27,11 +27,12 @@ namespace TheCookieJar.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+        public DbSet<Customer> Customer { get; set; }
         public DbSet<CookieSurvey> Survey { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
     }
 }

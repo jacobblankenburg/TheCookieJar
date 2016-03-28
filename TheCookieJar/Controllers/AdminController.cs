@@ -37,16 +37,16 @@ namespace TheCookieJar.Controllers
         private decimal? getMonthlyRevenue()
         {
             decimal? monthlyRevenue = 0;
-            monthlyRevenue = _adb.Customers.Select(x=>x.BillingAmount).Sum();
+            monthlyRevenue = _adb.Customer.Select(x=>x.BillingAmount).Sum();
             return monthlyRevenue;
         }
         private double? GetNumberOfSubscribers()
         {
             double? numberOfSubsribers = 0;
-            var isDatabaseEmpty = _adb.Customers.Select(y => y).FirstOrDefault();
+            var isDatabaseEmpty = _adb.Customer.Select(y => y).FirstOrDefault();
             if (isDatabaseEmpty != null)
             {
-                numberOfSubsribers = _adb.Customers.Count();
+                numberOfSubsribers = _adb.Customer.Count();
             }
             return numberOfSubsribers;
         }

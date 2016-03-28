@@ -13,14 +13,12 @@ namespace TheCookieJar.Controllers
     public class SurveyController : Controller
     {
         private JarContex db = new JarContex();
-<<<<<<< HEAD
+
         private ApplicationDbContext adb = new ApplicationDbContext();
 
 
         // GET: Survey
-=======
-        // GET: Surveys
->>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
+
         public ActionResult Index()
         {
 
@@ -28,11 +26,6 @@ namespace TheCookieJar.Controllers
 
             return View(db.Surveys.ToList());
         }
-<<<<<<< HEAD
-
-        // GET: Survey/Details/5
-=======
->>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -46,29 +39,19 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-<<<<<<< HEAD
-
-        // GET: Survey/Create
-=======
->>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         public ActionResult Create()
         {
             return View();
         }
-<<<<<<< HEAD
+
 
         // POST: Survey/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-=======
->>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Question1,Question2,Question3,sum")] CookieSurvey survey)
         {
-
-          
-
             if (ModelState.IsValid)
             {
                 survey.TotalScore = survey.Question1 + survey.Question2 + survey.Question3;
@@ -108,12 +91,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Tea"), new Contents("ShortBread Cookie"), new Contents("White Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Tea"), new JarContent("ShortBread Cookie"), new JarContent("White Mug") };
                             survey.jar = TeaBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Green Tea"), new Contents("Frosted Cookie"), new Contents("Grey mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Green Tea"), new JarContent("Frosted Cookie"), new JarContent("Grey mug") };
                             survey.jar = TeaBox;
                         }
                     }
@@ -121,12 +104,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Coffee"), new Contents("Dark Chocolate Cookie"), new Contents("Black Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
                             survey.jar = CoffeeBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Mocha"), new Contents("Double Choclate chip Cookie"), new Contents("Black mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
                             survey.jar = CoffeeBox;
                         }
                     }
@@ -134,12 +117,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Hot Chocolate"), new Contents("M&M Cookie"), new Contents("Green Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
                             survey.jar = KidBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Latte"), new Contents("SnowMan Cookie"), new Contents("Blue mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
                             survey.jar = KidBox;
                         }
                     }
@@ -151,12 +134,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Tea"), new Contents("ShortBread Cookie"), new Contents("White Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Tea"), new JarContent("ShortBread Cookie"), new JarContent("White Mug") };
                             survey.jar = TeaBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Green Tea"), new Contents("Frosted Cookie"), new Contents("Grey mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Green Tea"), new JarContent("Frosted Cookie"), new JarContent("Grey mug") };
                             survey.jar = TeaBox;
                         }
                     }
@@ -164,12 +147,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Coffee"), new Contents("Dark Chocolate Cookie"), new Contents("Black Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
                             survey.jar = CoffeeBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Mocha"), new Contents("Double Choclate chip Cookie"), new Contents("Black mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
                             survey.jar = CoffeeBox;
                         }
                     }
@@ -177,12 +160,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Hot Chocolate"), new Contents("M&M Cookie"), new Contents("Green Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
                             survey.jar = KidBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Latte"), new Contents("SnowMan Cookie"), new Contents("Blue mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
                             survey.jar = KidBox;
                         }
                     }
@@ -194,12 +177,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Tea"), new Contents("ShortBread Cookie"), new Contents("White Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Tea"), new JarContent("ShortBread Cookie"), new JarContent("White Mug") };
                             survey.jar = TeaBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Green Tea"), new Contents("Frosted Cookie"), new Contents("Grey mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Green Tea"), new JarContent("Frosted Cookie"), new JarContent("Grey mug") };
                             survey.jar = TeaBox;
                         }
                     }
@@ -207,12 +190,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Coffee"), new Contents("Dark Chocolate Cookie"), new Contents("Black Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Coffee"), new JarContent("Dark Chocolate Cookie"), new JarContent("Black Mug") };
                             survey.jar = CoffeeBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Mocha"), new Contents("Double Choclate chip Cookie"), new Contents("Black mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Mocha"), new JarContent("Double Choclate chip Cookie"), new JarContent("Black mug") };
                             survey.jar = CoffeeBox;
                         }
                     }
@@ -220,12 +203,12 @@ namespace TheCookieJar.Controllers
                     {
                         if (rando == 0)
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Hot Chocolate"), new Contents("M&M Cookie"), new Contents("Green Mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Hot Chocolate"), new JarContent("M&M Cookie"), new JarContent("Green Mug") };
                             survey.jar = KidBox;
                         }
                         else
                         {
-                            TeaBox.JarContents = new List<JarContent>() { new Contents("Latte"), new Contents("SnowMan Cookie"), new Contents("Blue mug") };
+                            TeaBox.JarContents = new List<JarContent>() { new JarContent("Latte"), new JarContent("SnowMan Cookie"), new JarContent("Blue mug") };
                             survey.jar = KidBox;
                         }
                     }
@@ -237,11 +220,9 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-<<<<<<< HEAD
 
         // GET: Survey/Edit/5
-=======
->>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
+
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -255,13 +236,12 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-<<<<<<< HEAD
+
 
         // POST: Survey/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-=======
->>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Question1,Question2,Question3,sum")] CookieSurvey survey)
@@ -274,11 +254,10 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-<<<<<<< HEAD
+
 
         // GET: Survey/Delete/5
-=======
->>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -292,11 +271,9 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-<<<<<<< HEAD
+
 
         // POST: Survey/Delete/5
-=======
->>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
