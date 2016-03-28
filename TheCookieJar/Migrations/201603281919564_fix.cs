@@ -3,7 +3,7 @@ namespace TheCookieJar.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Admin : DbMigration
+    public partial class fix : DbMigration
     {
         public override void Up()
         {
@@ -50,15 +50,50 @@ namespace TheCookieJar.Migrations
                 "dbo.CookieSurveys",
                 c => new
                     {
-                        ID = c.Int(nullable: false, identity: true),
-                        Question1 = c.String(),
-                        Question2 = c.String(),
-                        Question3 = c.String(),
-                        QuestionAnswer = c.String(),
+                        Id = c.Int(nullable: false, identity: true),
+                        Question1 = c.Int(nullable: false),
+                        Question2 = c.Int(nullable: false),
+                        Question3 = c.Int(nullable: false),
+                        QuestionAnswer = c.Int(nullable: false),
                         QuestionScore = c.Int(nullable: false),
                         TotalScore = c.Int(nullable: false),
+                        userID = c.String(),
+                        sum = c.Int(nullable: false),
+                        isSubscribed = c.Boolean(nullable: false),
+                        jar_ID = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Jars", t => t.jar_ID)
+                .Index(t => t.jar_ID);
+            
+            CreateTable(
+                "dbo.Jars",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        userId = c.Int(nullable: false),
+                        Name = c.String(),
+                        Beverage = c.String(),
+                        Cookie = c.String(),
+                        Mug = c.String(),
+                        Price = c.Double(nullable: false),
+                        jarName = c.String(),
+                        jarPrice = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.JarContents",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        name = c.String(),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
+                        Jar_ID = c.Int(),
+                    })
+                .PrimaryKey(t => t.ID)
+                .ForeignKey("dbo.Jars", t => t.Jar_ID)
+                .Index(t => t.Jar_ID);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -116,16 +151,22 @@ namespace TheCookieJar.Migrations
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.CookieSurveys", "jar_ID", "dbo.Jars");
+            DropForeignKey("dbo.JarContents", "Jar_ID", "dbo.Jars");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
+            DropIndex("dbo.JarContents", new[] { "Jar_ID" });
+            DropIndex("dbo.CookieSurveys", new[] { "jar_ID" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
+            DropTable("dbo.JarContents");
+            DropTable("dbo.Jars");
             DropTable("dbo.CookieSurveys");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
