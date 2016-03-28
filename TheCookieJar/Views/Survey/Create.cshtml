@@ -1,10 +1,15 @@
 ﻿@model TheCookieJar.Models.CookieSurvey
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Take Survey";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<<<<<<< HEAD
 <h2>Survey</h2>
+=======
+<h2>Cookies, YUM!</h2>
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
 
 
 @using (Html.BeginForm())
@@ -13,6 +18,7 @@
 
     <div class="form-horizontal">
         <h4>Survey</h4>
+<<<<<<< HEAD
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -29,10 +35,43 @@
 
                     @Html.DropDownListFor(m => m.Question1, listItems1)
                 }
+=======
+        <hr/>
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.Question1, htmlAttributes: new {@class = "control -label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Question1, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.Question1, "", new {@class = "text-danger"})
             </div>
-        </div>
+        </div>*@
 
         <div class="form-group">
+            <h4>How do you feel when you eat your favorite cookie?</h4>
+            <div class="col-md-10" style="color: black">
+                @{
+                    var listItems1 = new List<SelectListItem>()
+                    {
+                        new SelectListItem {Text = "Relaxed", Value = "1"},
+                        new SelectListItem {Text = "Indulgent", Value = "2"},
+                        new SelectListItem {Text = "Like a Kid Again", Value = "3"}
+                    };
+
+                    @Html.DropDownListFor(model => model.QuestionAnswer, listItems1)
+                }
+            </div>
+        </div>
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.Question2, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Question2, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.Question2, "", new {@class = "text-danger"})
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
+            </div>
+        </div>*@
+
+        <div class="form-group">
+<<<<<<< HEAD
             <h3>2. What type of cookie do you enjoy____?</h3>
             <div class="col-md-10">
                 @{var listItems2 = new List<SelectListItem>
@@ -60,10 +99,52 @@
                 
 
                 @Html.DropDownListFor(m => m.Question3, listItems3)
+=======
+            <h4>What is your favorite type of cookie?</h4>
+            <div class="col-md-10" style="color: black">
+                @{
+                    var listItems2 = new List<SelectListItem>()
+                    {
+                        new SelectListItem {Text = "Light and Flakey", Value = "1"},
+                        new SelectListItem {Text = "Lots of Chocolate", Value = "2"},
+                        new SelectListItem {Text = "Soft and Chewy", Value = "3"}
+                    };
+                    @Html.DropDownListFor(model => model.QuestionAnswer, listItems2)
+                }
+            </div>
+        </div>
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.Question3, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Question3, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.Question3, "", new {@class = "text-danger"})
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            <h4>What's your favorite way to spend a rainy day?</h4>
+            <div class="col-md-10" style="color: black">
+                @{
+                    var listItems3 = new List<SelectListItem>()
+                    {
+                        new SelectListItem {Text = "Reading a book", Value = "1"},
+                        new SelectListItem {Text = "Museum", Value = "2"},
+                        new SelectListItem {Text = "Playing games", Value = "3"}
+                    };
+                    @Html.DropDownListFor(model => model.QuestionAnswer, listItems3)
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
                 }
 
             </div>
         </div>
+<<<<<<< HEAD
+=======
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="submit" class="btn btn-default"/>
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
@@ -72,12 +153,19 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
                     }
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
 
+=======
+    <div>
+        @Html.ActionLink("Survey Create", "Index")
+    </div>
+}
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

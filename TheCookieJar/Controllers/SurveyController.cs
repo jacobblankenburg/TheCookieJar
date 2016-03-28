@@ -13,10 +13,14 @@ namespace TheCookieJar.Controllers
     public class SurveyController : Controller
     {
         private JarContex db = new JarContex();
+<<<<<<< HEAD
         private ApplicationDbContext adb = new ApplicationDbContext();
 
 
         // GET: Survey
+=======
+        // GET: Surveys
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         public ActionResult Index()
         {
 
@@ -24,8 +28,11 @@ namespace TheCookieJar.Controllers
 
             return View(db.Surveys.ToList());
         }
+<<<<<<< HEAD
 
         // GET: Survey/Details/5
+=======
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -39,16 +46,22 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
+<<<<<<< HEAD
 
         // GET: Survey/Create
+=======
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         public ActionResult Create()
         {
             return View();
         }
+<<<<<<< HEAD
 
         // POST: Survey/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+=======
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Question1,Question2,Question3,sum")] CookieSurvey survey)
@@ -222,11 +235,13 @@ namespace TheCookieJar.Controllers
                 db.SaveChanges();
                 return Redirect("~/Survey/Index");
             }
-
             return View(survey);
         }
+<<<<<<< HEAD
 
         // GET: Survey/Edit/5
+=======
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -240,10 +255,13 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
+<<<<<<< HEAD
 
         // POST: Survey/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+=======
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Question1,Question2,Question3,sum")] CookieSurvey survey)
@@ -256,8 +274,11 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
+<<<<<<< HEAD
 
         // GET: Survey/Delete/5
+=======
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -271,8 +292,11 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
+<<<<<<< HEAD
 
         // POST: Survey/Delete/5
+=======
+>>>>>>> 6c250c0c1b652b5dc6c2f65d7f505acca0d25f85
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -282,7 +306,6 @@ namespace TheCookieJar.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

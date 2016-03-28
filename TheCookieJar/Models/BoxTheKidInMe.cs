@@ -5,7 +5,7 @@ using System.Web;
 
 namespace TheCookieJar.Models
 {
-    public class Cookie
+    public class BoxTheKidInMe
     {
     }
 }
