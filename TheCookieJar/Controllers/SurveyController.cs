@@ -12,13 +12,11 @@ namespace TheCookieJar.Controllers
     public class SurveyController : Controller
     {
         private JarContex db = new JarContex();
-
         // GET: Surveys
         public ActionResult Index()
         {
             return View(db.Surveys.ToList());
         }
-
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -32,13 +30,10 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-
-
         public ActionResult Create()
         {
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Question1,Question2,Question3,QuestionScore,TotalScore")] CookieSurvey survey)
@@ -50,11 +45,8 @@ namespace TheCookieJar.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(survey);
         }
-
-
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -68,8 +60,6 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Question1,Question2,Question3,QuestionScore,TotalScore")] CookieSurvey survey)
@@ -82,8 +72,6 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-
-
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -97,7 +85,6 @@ namespace TheCookieJar.Controllers
             }
             return View(survey);
         }
-
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -107,7 +94,6 @@ namespace TheCookieJar.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -8,15 +8,12 @@ using System.Linq;
 
 namespace TheCookieJar.Migrations
 {
-    
-
     internal sealed class Configuration : DbMigrationsConfiguration<TheCookieJar.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
-
         protected override void Seed(TheCookieJar.Models.ApplicationDbContext context)
         {
             {

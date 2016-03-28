@@ -3,7 +3,7 @@ namespace TheCookieJar.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Admin : DbMigration
+    public partial class AnotherMigration : DbMigration
     {
         public override void Up()
         {
@@ -16,9 +16,9 @@ namespace TheCookieJar.Migrations
                         LastName = c.String(),
                         StreetAddress = c.String(),
                         City = c.String(),
+                        State = c.String(),
                         Zip = c.Int(nullable: false),
                         BoxPreference = c.Int(nullable: false),
-                        SubscriptionType = c.Int(nullable: false),
                         BillingAmount = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.ID);
@@ -67,7 +67,7 @@ namespace TheCookieJar.Migrations
                         Id = c.String(nullable: false, maxLength: 128),
                         Address = c.String(),
                         City = c.String(),
-                        Country = c.String(),
+                        State = c.String(),
                         ZipCode = c.Int(nullable: false),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),

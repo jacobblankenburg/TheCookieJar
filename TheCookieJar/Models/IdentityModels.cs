@@ -18,10 +18,9 @@ namespace TheCookieJar.Models
         }
         public string Address { get; set; }
         public string City { get; set; }
-        public string Country { get; set; }
+        public string State { get; set; }
         public int ZipCode { get; set; }
     }
-
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -34,6 +33,5 @@ namespace TheCookieJar.Models
         {
             return new ApplicationDbContext();
         }
-
     }
 }

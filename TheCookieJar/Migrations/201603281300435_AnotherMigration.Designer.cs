@@ -7,13 +7,13 @@ namespace TheCookieJar.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Admin : IMigrationMetadata
+    public sealed partial class AnotherMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Admin));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AnotherMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201603251804572_Admin"; }
+            get { return "201603281300435_AnotherMigration"; }
         }
         
         string IMigrationMetadata.Source

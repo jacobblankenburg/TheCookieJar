@@ -7,9 +7,9 @@ namespace TheCookieJar.Models
 {
     public class Jar
     {
-        public int Id { get; set; }
-        public string Beverage { get; set; }
-        public string Cookie { get; set; }
-        public string Mug { get; set; }
+            public int Id { get; set; }
+            public string Beverage { get; set; }
+            public string Cookie { get; set; }
+            public decimal Price { get; set; }       
     }
 }
