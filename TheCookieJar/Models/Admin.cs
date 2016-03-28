@@ -13,7 +13,7 @@ namespace TheCookieJar.Models
     public double? NumberOfKidAccounts { get; set; }
     public double? NumberOfTeaAccounts { get; set; }
         public double? NumberOfCoffeeAccounts { get; set; }
-        public double? MonthlyRevenue { get; set; }
+        public decimal? MonthlyRevenue { get; set; }
     public double? PercentKidAccounts { get; set; }
     public double? PercentTeaAccounts { get; set; }
         public double? PercentCoffeeAccounts { get; set; }
